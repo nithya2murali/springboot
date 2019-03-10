@@ -33,6 +33,12 @@ import com.telusko.demo.model.Alien;
 			return "home1.jsp";
 		}
 		
+		@RequestMapping("/subAlien")
+		public String subAlien(Alien alien)
+		{
+			repo.save(alien);
+			return "home1.jsp";
+		}
 		
 		@RequestMapping("/aliens")
 		@ResponseBody
